@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Thumb Gardening & Lawn Care</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,6 +43,14 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+        .carousel {
+            width: 80%;
+            margin: auto;
+        }
+        .carousel img {
+            width: 100%;
+            border-radius: 5px;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -64,14 +74,24 @@
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
+        <section id="carousel" class="carousel">
+            <h2>Our Work</h2>
+            <div class="slick-carousel">
+                <div><img src="C:\Users\MohammeY\OneDrive - Unisys\Documents\gardening\images\image1.jpg" alt="Dog pushing a lawn mower"></div>
+                <div><img src="C:\Users\MohammeY\OneDrive - Unisys\Documents\gardening\images\image2.jpg" alt="Dog using a weed eater"></div>
+                <div><img src="C:\Users\MohammeY\OneDrive - Unisys\Documents\gardening\images\image3.jpg" alt="Dog trimming hedges"></div>
+                <div><img src="C:\Users\MohammeY\OneDrive - Unisys\Documents\gardening\images\image4.jpg" alt="Dog using scissors to cut leaves"></div>
+                <div><img src="C:\Users\MohammeY\OneDrive - Unisys\Documents\gardening\images\image5.jpg" alt="Dog engaged in general gardening activities"></div>
+            </div>
+        </section>
         <section id="services" class="services">
             <h2>Our Services</h2>
             <ul>
                 <li>Lawn Mowing</li>
                 <li>Garden Maintenance</li>
-                <li>Tree cutting</li>
+                <li>Tree Pruning</li>
                 <li>Weeding and Fertilization</li>
-                
+                <li>Landscape Design</li>
             </ul>
         </section>
         <section id="about" class="about">
@@ -99,5 +119,18 @@
     <footer>
         <p>&copy; 2024 Green Thumb Gardening & Lawn Care</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slick-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
 </body>
 </html>
